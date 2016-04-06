@@ -25,6 +25,7 @@
 
 		<!-- LightBox -->
 		<link href="css/lightbox/vlightbox.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/lightbox/style-gallery.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/lightbox/visuallightbox.css" rel="stylesheet" type="text/css" media="all">
 		<link rel="stylesheet" type="text/css" href="css/lightbox/style.css" />
 		<!-- end LightBox -->
@@ -46,7 +47,6 @@
 		<div id="free-flash-header" style="width:820px;margin:0 auto;text-align:right;position:relative;bottom:0px;margin-top:63px;color:#363636;font-size:10px;font-family:Verdana"><strong>free flash templates</strong> : <a href="http://www.freenicetemplates.com/"><strong>free flash templates</strong></a></div>																			 
 	</div>	
 	<!--END OF TERMS OF USE-->	
-		
 		<header>
 			<div class="container">
 
@@ -77,7 +77,7 @@
 					<!-- naviguation -->
 					<nav id="nav">
 						<ul>
-							<li class="active">		
+							<li>		
 								<a href="index.htm">
 									<i class="icon-arrow"></i>
 									<span>HOME</span>
@@ -91,7 +91,7 @@
 									<div class="bg-nav"></div>
 								</a>
 							</li>
-							<li>	
+							<li class="active">		
 								<a href="portfolio.htm">
 									<i class="icon-arrow"></i>
 									<span>MY PORTFOLIO</span>
@@ -112,12 +112,12 @@
 									<div class="bg-nav"></div>
 								</a>
 							</li>
+
+							<audio id="nav-sound" preload="auto">
+								<source src="audio/bouton.mp3"></source>
+							</audio>
+
 						</ul>
-
-						<audio id="nav-sound" preload="auto">
-							<source src="audio/bouton.mp3">
-						</audio>
-
 					</nav>
 					<!-- end naviguation -->
 
@@ -133,78 +133,39 @@
 
 				<!-- end content -->
 				<div class="col-md-9 col-xs-12 no_right">
-					
-					<div class="col-md-12 col-xs-12 no_right slider">
-						<div id="wowslider-container1">
-							<div class="ws_images"><ul>
-									<li><img src="images/slider/your_image1.jpg" alt="flower" title="" id="wows1_0"/></li>
-									<li><img src="images/slider/your_image2.jpg" alt="My best photos" title="My best photos" id="wows1_1"/></li>
-									<li><img src="images/slider/your_image3.jpg" alt="MY  VOYAGE" title="MY VOYAGE" id="wows1_2"/></li>
-								</ul></div>
 
-							<div class="ws_shadow"></div>
-						</div>
-					</div>
+					<h2>MY PORTFOLIO</h2>
 
-
-					<div class="row">
-
-						<div class="col-md-6 col-xs-12">
-							<article>
-								<h2>FEW WORD ABOUT ME</h2>
-								<div>
-									<div class="vlightbox-cont bloc-img">
-										<a class="vlightbox1" href="images/about-me.png" title="about-me">
-											<img src="images/thumbs/about-me.png" alt="about-me"/>
-										</a>
-										<span class="vlb">
-											Caption here
-										</span>
-									</div>
-									<h4 class="green">Lorem ipsum amet</h4>
-									<p>Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et pellentesque lorem sapien vel.</p>
-
-									<p>Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et <a class="orange underline" href="">pellentesque lorem</a>.</p>	
-
-									<p>Praesent dignissim, nibh lectus pharetra blandit cursus, urna nibh sagittis nibh nulla.</p>
-								</div>
-								
-							</article>
+					<div id="wowslider-container2" class="gallery">
+						<div class="ws_images"><ul>
+							<li><img src="images/portfolio/image1.jpg" alt="image-1" title="your text" id="wows2_0"/></li>
+							<li><img src="images/portfolio/image2.jpg" alt="image-2" title="your text" id="wows2_1"/></li>
+							<li><img src="images/portfolio/image3.jpg" alt="image-3" title="your text" id="wows2_2"/></li>
+							<li><img src="images/portfolio/image4.jpg" alt="image-4" title="your text" id="wows2_3"/></li>
+							<li><img src="images/portfolio/image5.jpg" alt="image-5" title="your text" id="wows2_4"/></li>
+							<li><img src="images/portfolio/image6.jpg" alt="image-6" title="your text" id="wows2_5"/></li>
+							<li><img src="images/portfolio/image7.jpg" alt="image-7" title="your text" id="wows2_6"/></li>
+							<li><img src="images/portfolio/image8.jpg" alt="image-8" title="your text" id="wows2_7"/></li>
+							<li><img src="images/portfolio/image9.jpg" alt="image-9" title="your text" id="wows2_8"/></li>
+							<li><img src="images/portfolio/image10.jpg" alt="image-10" title="your text" id="wows2_9"/></li>
+						</ul></div>
+						<div class="ws_thumbs">
+						<div>
+							<a href="#wows2_0" title="image-1"><img src="images/portfolio/tooltips/image1.jpg" alt="" /></a>
+							<a href="#wows2_1" title="image-2"><img src="images/portfolio/tooltips/image2.jpg" alt="" /></a>
+							<a href="#wows2_2" title="image-3"><img src="images/portfolio/tooltips/image3.jpg" alt="" /></a>
+							<a href="#wows2_3" title="image-4"><img src="images/portfolio/tooltips/image4.jpg" alt="" /></a>
+							<a href="#wows2_4" title="image-5"><img src="images/portfolio/tooltips/image5.jpg" alt="" /></a>
+							<a href="#wows2_5" title="image-6"><img src="images/portfolio/tooltips/image6.jpg" alt="" /></a>
+							<a href="#wows2_6" title="image-7"><img src="images/portfolio/tooltips/image7.jpg" alt="" /></a>
+							<a href="#wows2_7" title="image-8"><img src="images/portfolio/tooltips/image8.jpg" alt="" /></a>
+							<a href="#wows2_8" title="image-9"><img src="images/portfolio/tooltips/image9.jpg" alt="" /></a>
+							<a href="#wows2_9" title="image-10"><img src="images/portfolio/tooltips/image10.jpg" alt="" /></a>
+							</div>
 						</div>
 
-						<div class="col-md-6 col-xs-12 no_right">
-							<article>
-								<h2>WELCOME TO MY WEBSITE</h2>
-								<div>
-									<div class="vlightbox-cont bloc-img">
-										<a class="vlightbox1" href="images/welcome1.png" title="about-me">
-											<img src="images/thumbs/welcome1.png" alt="about-me"/>
-										</a>
-										<span class="vlb">
-											Caption here
-										</span>
-									</div>
-									<h4 class="green">Lorem ipsum amet</h4>
-									<p>Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et pellentesque lorem sapien vel. <a class="green underline" href="">Read more</a> </p>
-								</div>
-								
-								<div>
-									<div class="vlightbox-cont bloc-img">
-										<a class="vlightbox1" href="images/welcome2.png" title="about-me">
-											<img src="images/thumbs/welcome2.png" alt="about-me"/>
-										</a>
-										<span class="vlb">
-											Caption here
-										</span>
-									</div>
-									<h4 class="green">Lorem ipsum amet</h4>
-									<p>Praesent dignissim, lectus pharetra blandit cursus, urna nibh sagittis nulla, et pellentesque lorem sapien vel. <a class="green underline" href="">Read more</a> </p>
-								</div>
-
-							</article>
-						</div>
-
-					</div>
+						<div class="ws_shadow"></div>
+					</div>	
 
 				</div>
 				<!-- end content -->
@@ -219,18 +180,18 @@
 				<div class="row">
 
 					<div class="col-md-8 col-xs-12 align_right">
-						<p class="copyright">Copyright &#169; 2014 YOUR NAME</p>
+						<p class="copyright">Copyright &#169; 2015 YOUR NAME</p>
 					</div>
+
+					<div class="col-md-4 col-xs-12 align_right">
+						<p class="dark_grey small_text"></p>
+					</div>
+
 				</div>
 			</div>
 		</footer>
 		<!-- end footer -->
-    </div>
-
-		<audio id="audio-bg">
-		    <source src="audio/music.mp3">
-		</audio>
-		
+</div>		
 
     <script type='text/javascript' src="js/jquery-2.1.3.js"></script>
     <script type='text/javascript' src="assets/js/visuallightbox.js"></script>
@@ -244,3 +205,5 @@
 
   </body>
 </html>
+
+
