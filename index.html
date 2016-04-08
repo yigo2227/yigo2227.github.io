@@ -367,38 +367,14 @@
     
 //´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´    
     
-    
-    
+
     <div id="findhotels">
       Find hotels in:
-      <div id="locationField">
-      <input id="autocomplete" placeholder="Enter a city" type="text" />
-      </div>
-        <div id="controls">
-       <select id="country">
-			<ul >
-				<li><a value="all">all</a></li>
-				<li><a value="au">Australia</a></li>
-				<li><a value="br">Brazil</a></li>
-				<li><a value="ca">Canada</a></li>
-       			<li><a value="fr">France</a></li>
-       			<li><a value="de">Germany</a></li>
-       			<li><a value="mx" selected>Mexico</a></li>
-       			<li><a value="nz">New Zeland</a></li>
-       			<li><a value="it">Italy</a></li>
-       			<li><a value="za">South Africa</a></li>
-       			<li><a value="es">Spain</a></li>
-       			<li><a value="pt">Portugal</a></li>
-       			<li><a value="us">U.S.A</a></li>
-       			<li><a value="uk">United Kingdom</a></li>
-       	  </ul>
-        </select>
-    </div>
     </div>
 
-  
-  
-<!--
+    <div id="locationField">
+      <input id="autocomplete" placeholder="Enter a city" type="text" />
+    </div>
 
     <div id="controls">
       <select id="country">
@@ -418,7 +394,7 @@
         <option value="uk">United Kingdom</option>
       </select>
     </div>
- -->
+
     <div id="map"></div>
 
     <div id="listing">
@@ -435,19 +411,19 @@
             <td id="iw-url"></td>
           </tr>
           <tr id="iw-address-row" class="iw_table_row">
-            <td class="iw_attribute_name">Direccion:</td>
+            <td class="iw_attribute_name">Address:</td>
             <td id="iw-address"></td>
           </tr>
           <tr id="iw-phone-row" class="iw_table_row">
-            <td class="iw_attribute_name">Telefono:</td>
+            <td class="iw_attribute_name">Telephone:</td>
             <td id="iw-phone"></td>
           </tr>
           <tr id="iw-rating-row" class="iw_table_row">
-            <td class="iw_attribute_name">Categoria:</td>
+            <td class="iw_attribute_name">Rating:</td>
             <td id="iw-rating"></td>
           </tr>
           <tr id="iw-website-row" class="iw_table_row">
-            <td class="iw_attribute_name">pagina web:</td>
+            <td class="iw_attribute_name">Website:</td>
             <td id="iw-website"></td>
           </tr>
         </table>
@@ -467,7 +443,7 @@
       var map, places, infoWindow;
       var markers = [];
       var autocomplete;
-      var countryRestrict = {'country': 'mx'};
+      var countryRestrict = {'country': 'us'};
       var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
@@ -528,8 +504,8 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: countries['mx'].zoom,
-          center: countries['mx'].center,
+          zoom: countries['us'].zoom,
+          center: countries['us'].center,
           mapTypeControl: false,
           panControl: false,
           zoomControl: false,
@@ -731,12 +707,8 @@
         }
       }
     </script>
-    <script async defer>
-        
-    src="https://www.google.com/maps/embed/v1/search?q=Bares%20en%20oaxaca&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw" 
-    </script>
-    
-    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw&libraries=places&callback=initMap"
+        async defer></script>
     
     
     
