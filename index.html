@@ -366,9 +366,10 @@
 		
     
 //´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´    
-    <div>
+<div>
       <input  placeholder="Enter a city" type="text" id=lugar/>
 </div>
+<button  type="button" onclick="busqueda()" >Buscar</button>
 
     <div id="findhotels">
       Find hotels in:
@@ -707,7 +708,16 @@
         } else {
           document.getElementById('iw-website-row').style.display = 'none';
         }
+          
       }
+        
+        function busqueda() {
+            var l=document.getElementById('lugar').value;   
+            
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/search?q="+l+"+en+Oaxaca,+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw" allowfullscreen></iframe>
+        
+        }
     </script>
 <!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw&libraries=places&callback=initMap"
         
@@ -715,8 +725,7 @@
     async defer></script>
     -->
     
-    <iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/search?q=bares+en+Oaxaca,+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw" allowfullscreen></iframe>
+   
     
     
     
