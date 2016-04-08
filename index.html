@@ -4,16 +4,24 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <script type="text/javascript" src="archivo.js"></script>
+ <script type="text/javascript">
+    
+    function buscarSitio() {
+    var lugar = 'Hoteles'; 
+    
+    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+'+en+Oaxaca,+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
+}
+</script>
  
 <title>Prueba</title>
 </head>
 <body>
 <h1><strong>Formulario ejemplo !!!</strong></h1>
-
+<iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/search?q=Bares+en+Oaxaca,+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw" allowfullscreen></iframe>
 <input type="button" value="Buscar" onClick="buscarSitio()" />
 
-	<div id="ifame1"></div>
+
 	
  
 </body>
