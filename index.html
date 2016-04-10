@@ -76,7 +76,7 @@ var infowindow = new google.maps.InfoWindow();
   // Sets a listener on a radio button to change the filter type on Places
   // Autocomplete.
   function setupClickListener(id, types) {
-    var radioButton = document.getElementById(id);
+    var radioButton = document.getElementById("pac-input");
     radioButton.addEventListener('click', function() {
       autocomplete.setTypes(types);
     });
