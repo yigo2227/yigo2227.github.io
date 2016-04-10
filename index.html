@@ -6,7 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <script type="text/javascript">
     
-    function buscarSitio() {
+    function initMap() {
     
     var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -33.8688, lng: 151.2195},
@@ -21,7 +21,7 @@
     document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+autocomplete+',+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
         
         
-}
+
      
 var infowindow = new google.maps.InfoWindow();
   var marker = new google.maps.Marker({
