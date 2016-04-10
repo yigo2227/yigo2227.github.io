@@ -69,7 +69,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
 <div>
     <input id="lugar" placeholder="Lugar a buscar..." type="text" />
      <input id="estado" placeholder="Estado a buscar..." type="text" />
-    <input type="button" value="Geocoder" onClick="initMap()" />
+    <input type="button" value="Geocoder" onClick="start()" />
 </div>
 
        <input id="pac-input" class="controls" type="text"
@@ -105,7 +105,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
     var lugar = document.getElementById("lugar").value;
    // var estado = document.getElementById("estado").value; 
     
-    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+esta+',+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
+    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+esta+'&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
     }
     
     function initMap() {
