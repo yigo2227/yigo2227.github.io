@@ -22,6 +22,7 @@
   height: 32px;
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  right: auto;
 }
 
 #pac-input {
@@ -29,7 +30,7 @@
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 12px;
+  margin-left: 7px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 300px;
@@ -70,9 +71,9 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
      <input id="estado" placeholder="Estado a buscar..." type="text" />
     <input type="button" value="Geocoder" onClick="start()" />
 </div>
-   <div class="controls">
-    <input id="lugar"  placeholder="Lugar a buscar..." type="text" />
-    <input id="pac-input"  type="text" placeholder="Enter a location">
+   <div>
+    <input id="lugar" class="controls" placeholder="Lugar a buscar..." type="text" />
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
     </div>
     <div id="type-selector" class="controls">
       <input type="radio" name="type" id="changetype-all" checked="checked">
