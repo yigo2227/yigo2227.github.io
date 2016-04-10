@@ -11,12 +11,12 @@
         padding: 0;
       }
       #map {
-        height: 500px;
-        width: 500px;
+        height: 700px;
+        width: 700px;
       }
      #myIframe{
-        width: 500px;
-        height: 500px; 
+        width: 700px;
+        height: 700px; 
      }
 .controls {
   margin-top: 10px;
@@ -32,7 +32,7 @@
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 5px;
   font-weight: 300;
   margin-left: 12px;
   padding: 0 11px 0 13px;
@@ -76,6 +76,8 @@ src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7
     <input type="button" value="Geocoder" onClick="start()" />
 </div>
    <div>
+    <input id="lugar" class="controls" placeholder="Lugar a buscar..." type="text" />
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
     </div>
     <div id="type-selector" class="controls">
       <input type="radio" name="type" id="changetype-all" checked="checked">
@@ -90,10 +92,8 @@ src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
     </div>
-    
     <div id="map">
-        <input id="lugar" class="controls" placeholder="Lugar a buscar..." type="text" />
-    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">    
+        
         
     </div>
    <!-- <script async defer
