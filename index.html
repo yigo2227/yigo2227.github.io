@@ -70,7 +70,7 @@
     var input = (document.getElementById('pac-input'));
     
         
-    var types = "all";
+    var types = document.getElementById('type-selector');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
@@ -141,6 +141,9 @@ var infowindow = new google.maps.InfoWindow();
   }
 
   setupClickListener('changetype-all', []);
+  setupClickListener('changetype-address', ['address']);
+  setupClickListener('changetype-establishment', ['establishment']);
+  setupClickListener('changetype-geocode', ['geocode']);
  
 }
 
@@ -165,7 +168,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
      <input id="pac-input" placeholder="Estado a buscar..." type="text" />
     <input type="button" value="Geocoder" onClick="initMap()" />
 </div>
-<!--
+
        <input id="pac-input" class="controls" type="text"
         placeholder="Enter a location">
     <div id="type-selector" class="controls">
@@ -180,7 +183,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
 
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
-    </div>-->
+    </div>
     <div id="map"></div>
 
    <!-- <script async defer
