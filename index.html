@@ -96,26 +96,17 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 <script type="text/javascript">
+    
+    function start(){        
+        var esta = (document.getElementById('pac-input').value);
+                
+    var lugar = document.getElementById("lugar").value;
+   // var estado = document.getElementById("estado").value; 
+    
+    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+esta+',+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
+    }
     
     function initMap() {
     
@@ -126,7 +117,6 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
         
         
     var input = (document.getElementById('pac-input'));
-    var esta = (document.getElementById('pac-input').value);
         
     var types = document.getElementById('type-selector');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -135,15 +125,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
     var autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
         
-        
-    var lugar = document.getElementById("lugar").value;
-   // var estado = document.getElementById("estado").value; 
-    
-    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+esta+',+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
-        
-        
 
-     
 var infowindow = new google.maps.InfoWindow();
   var marker = new google.maps.Marker({
     map: map,
@@ -205,9 +187,6 @@ var infowindow = new google.maps.InfoWindow();
  
 }
 
-  
-
-       
      
 </script>
 
