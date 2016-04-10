@@ -109,10 +109,10 @@ src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7
         
     var input = (document.getElementById('pac-input'));
     var luga = (document.getElementById('lugar'));
-    var types = document.getElementById('type-selector');
+    //var types = document.getElementById('type-selector');
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(luga);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
+    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
     var autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
