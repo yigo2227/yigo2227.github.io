@@ -11,12 +11,12 @@
         padding: 0;
       }
       #map {
-        height: 400px;
-        width: 900px;
+        height: 500px;
+        width: 500px;
       }
      #myIframe{
-        width: 900px;
-        height: 400px; 
+        width: 500px;
+        height: 500px; 
      }
 .controls {
   margin-top: 10px;
@@ -67,17 +67,19 @@
 </head>
 
 <body>
-
-
 <h1><strong>Formulario ejemplo !!!</strong></h1>
 <iframe id="myIframe" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw" allowfullscreen></iframe>
+
 <div>
-    <input id="lugar" class="controls" placeholder="Lugar a buscar..." name="type" type="text" />
-    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+     <input id="estado" placeholder="Estado a buscar..." type="text" />
     <input type="button" value="Geocoder" onClick="start()" />
 </div>
-<div id="type-selector" class="controls">
+   <div>
+    <input id="lugar" class="controls" placeholder="Lugar a buscar..." type="text" />
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+    </div>
+    <div id="type-selector" class="controls">
       <input type="radio" name="type" id="changetype-all" checked="checked">
       <label for="changetype-all">All</label>
 
@@ -90,8 +92,6 @@ src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7
       <input type="radio" name="type" id="changetype-geocode">
       <label for="changetype-geocode">Geocodes</label>
     </div>
-   
-    
     <div id="map">
         
     </div>
@@ -108,22 +108,21 @@ src="https://www.google.com/maps/embed/v1/search?q=Mexico,+México&key=AIzaSyAU7
     var lugar = document.getElementById("lugar").value;
    // var estado = document.getElementById("estado").value; 
     
-    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+'de'+esta+'&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
+    document.getElementById('myIframe').src ='https://www.google.com/maps/embed/v1/search?q='+lugar+esta+'&key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw';
     }
     
     function initMap() {
     
     var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 19.417881, lng: -99.134012},
-    zoom: 2
+    zoom: 5
   });
         
         
     var input = (document.getElementById('pac-input'));
-    var luga = (document.getElementById('lugar'));
+        
     var types = document.getElementById('type-selector');
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(luga);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
     var autocomplete = new google.maps.places.Autocomplete(input);
