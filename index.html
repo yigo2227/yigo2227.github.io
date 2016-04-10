@@ -12,9 +12,14 @@
     center: {lat: -33.8688, lng: 151.2195},
     zoom: 13
   });
+        
+        
     var input = (document.getElementById('pac-input'));
     var autocomplete = new google.maps.places.Autocomplete(input);
-        
+    var types = "all";
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
+   
     var lugar = document.getElementById("lugar").value;
    // var estado = document.getElementById("estado").value; 
     
@@ -101,7 +106,7 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
 <div>
     <input id="lugar" placeholder="Lugar a buscar..." type="text" />
      <input id="pac-input" placeholder="Estado a buscar..." type="text" />
-    <input type="button" value="Geocoder" onClick="buscarSitio()" />
+    <input type="button" value="Geocoder" onClick="initMap()" />
 </div>
 
 
