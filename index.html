@@ -4,6 +4,59 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+    </style>
+
  <script type="text/javascript">
     
     function initMap() {
@@ -15,11 +68,16 @@
         
         
     var input = (document.getElementById('pac-input'));
-    var autocomplete = new google.maps.places.Autocomplete(input);
+    
+        
     var types = "all";
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
-   
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+        
+        
     var lugar = document.getElementById("lugar").value;
    // var estado = document.getElementById("estado").value; 
     
@@ -76,16 +134,14 @@ var infowindow = new google.maps.InfoWindow();
   // Sets a listener on a radio button to change the filter type on Places
   // Autocomplete.
   function setupClickListener(id, types) {
-    var radioButton = document.getElementById("pac-input");
+    var radioButton = document.getElementById(id);
     radioButton.addEventListener('click', function() {
       autocomplete.setTypes(types);
     });
   }
 
   setupClickListener('changetype-all', []);
-  setupClickListener('changetype-address', ['address']);
-  setupClickListener('changetype-establishment', ['establishment']);
-  setupClickListener('changetype-geocode', ['geocode']);
+ 
 }
 
   
@@ -98,6 +154,7 @@ var infowindow = new google.maps.InfoWindow();
         async defer></script>
 
 </head>
+
 <body>
 <h1><strong>Formulario ejemplo !!!</strong></h1>
 <iframe id="myIframe" width="600" height="450" frameborder="0" style="border:0"
@@ -108,7 +165,23 @@ src="https://www.google.com/maps/embed/v1/search?q=Bares+de+Oaxaca+de+Juárez,+M
      <input id="pac-input" placeholder="Estado a buscar..." type="text" />
     <input type="button" value="Geocoder" onClick="initMap()" />
 </div>
+<!--
+       <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="type-selector" class="controls">
+      <input type="radio" name="type" id="changetype-all" checked="checked">
+      <label for="changetype-all">All</label>
 
+      <input type="radio" name="type" id="changetype-establishment">
+      <label for="changetype-establishment">Establishments</label>
+
+      <input type="radio" name="type" id="changetype-address">
+      <label for="changetype-address">Addresses</label>
+
+      <input type="radio" name="type" id="changetype-geocode">
+      <label for="changetype-geocode">Geocodes</label>
+    </div>-->
+    <div id="map"></div>
 
    <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU7_l7egJjMuRDkwwFf5v3V8gSKofP0cw&callback=initMap">
