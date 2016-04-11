@@ -170,7 +170,7 @@ var infowindow = new google.maps.InfoWindow();
     marker.setVisible(false);
     var place = autocomplete.getPlace();
     if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
+      window.alert("no es un lugar dentro de nuestra base de datos!!");
       return;
     }
 
